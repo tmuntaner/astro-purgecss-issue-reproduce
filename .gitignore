@@ -1,3 +1,6 @@
+.idea
+*.iml
+
 # build output
 dist/
 # generated types

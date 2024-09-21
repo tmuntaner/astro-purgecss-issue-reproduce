@@ -1,0 +1,29 @@
+---
+import '../assets/css/application.scss';
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+</head>
+<body class="bg-black text-white">
+<nav>
+<ul class="flex flex-wrap bg-gray-100 p-6">
+    <li class="mr-6">
+        <a class="text-gray-700 hover:text-gray-800" href="/">Home</a>
+    </li>
+    <li class="mr-6">
+        <a class="text-gray-500 hover:text-gray-800" href="/blog">Blog</a>
+    </li>
+</ul>
+</nav>
+
+<article class="p-20">
+    <slot/>
+</article>
+</body>
+</html>

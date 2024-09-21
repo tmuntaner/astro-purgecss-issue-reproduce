@@ -1,0 +1,20 @@
+---
+import {getCollection} from 'astro:content';
+import Layout from '../../layouts/application.astro';
+
+const blogArticles = await getCollection('blog');
+---
+
+<Layout>
+    <h1 class="text-2xl font-bold pb-4">My Blog Articles</h1>
+    <ul>
+    { blogArticles.map((entry) => (
+            <li class="pb-2 list-inside">
+                <a href={'/blog/' + entry.slug}>
+                    { entry.data.title }
+                </a>
+            </li>
+    ))
+    }
+    </ul>
+</Layout>
